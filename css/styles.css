@@ -1,0 +1,159 @@
+        /* Adiciona a imagem de fundo */
+
+        body {
+                background-image: url("https://cdn.pixabay.com/photo/2022/09/13/03/07/bob-marley-7450792_1280.jpg");
+                background-size: cover;
+                background-position: center center;
+                height:200vh;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            /* Abaixa a barra de navegação */
+
+            .navbar-custom {
+
+                background-color: #43ac39;
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+                margin-top: 0px;
+                border: 1px solid #292928;
+
+            }
+
+                #form-login,
+                #form-cadastro {
+
+                    display: flex;
+                    flex-direction: column;  /* Alinha os elementos na vertical */
+                    align-items: center;  /* Centraliza os itens horizontalmente */
+                    width: 90%;
+                    max-width: 400px;
+                    padding: 16px;
+                    background-color: white;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    margin: 10px;
+                    text-align: center;
+                    border: 1px solid #292828;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    justify-content: center;
+                }
+
+                /* Esconde o formulário de login por padrão */
+
+                #form-login {
+                    display: none;
+                }
+
+                /* Esconde o formulário de cadastro por padrão */
+
+                #form-cadastro {
+                    display: none;
+                }
+
+                /* Quando o formulário de login é ativo, mostramos ele */
+
+                #form-login.active {
+                    display: block;
+                }
+
+                /* Quando o formulário de cadastro é ativo, mostramos ele */
+
+                #form-cadastro.active {
+                    display: block;
+                }
+
+                #form-login input,
+                #form-cadastro input {
+
+                    width: 80%;
+                    padding: 12px;
+                    border-radius: 8px;
+                    border: 1px solid #ccc;
+                    margin: 10px 0;
+                }
+
+                #form-login button,
+                #form-cadastro button {
+
+                    width: 80%; /* Faz com que o botão ocupe a largura total */
+                    padding: 12px;
+                    background-color: #43ac39; /* Cor de fundo do botão */
+                    color: white;
+                    border-radius: 8px;
+                    border: none;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+
+                #form-login button:hover,
+                #form-cadastro button:hover {
+
+                    background-color: #367a2e; /* Cor do botão ao passar o mouse */
+                }
+
+                /* Centraliza o texto de links e títulos dentro do formulário */
+
+                #form-login h2, #form-cadastro h2 {
+                    
+                    margin: 0;  /* Remove qualquer margem que possa desalinhar o título */
+                    padding: 0; /* Remove qualquer padding */
+                    text-align: center; /* Garante que o título fica centralizado */
+                    color: #333; /* Define a cor do título */
+                }
+
+            /* Imagem otimizada para telas pequenas */
+
+            @media (max-width: 768px) {
+
+                body {
+                    background-image: url("https://cdn.pixabay.com/photo/2022/09/13/03/07/bob-marley-7450792_1280.jpg");
+                }
+            }
+
+            /* Personalização da barra de navegação */
+
+            .navbar-custom {
+                background-color: #c2d4c0;
+            }
+
+            /* Cor do texto na navbar */
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link {
+
+                color: black;
+            }
+
+            .navbar-custom .nav-link:hover {
+
+                color: #FFD700;
+            }
+
+            .text-center {
+
+                margin-top: 50px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.562);
+
+            }
+
+            .text-center h2,
+            .text-center p {
+
+                color: #000000;
+            }
+
+            /* Estilo do link "Ainda não tem uma conta? Cadastre-se" */
+
+            .text-center a {
+                
+                color: #43ac39;
+                font-weight: bold;
+                text-decoration: none;
+            }
