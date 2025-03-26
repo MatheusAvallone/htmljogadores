@@ -28,7 +28,7 @@
                             <a class="nav-link" href="file:///C:/dev/project/SistemaJogadores/front-end/login.html" id="nav-login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="nav-jogadores">Jogadores</a>
+                            <a class="nav-link" href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html" id="nav-jogadores">Jogadores</a>
                         </li>
                     </ul>
                 </div>
@@ -154,5 +154,28 @@
                 });
 
         </script>
+
+        <script>
+
+            let lastScrollTop = 0; // Variável para armazenar a última posição do scroll
+            const navbar = document.querySelector('.navbar-custom'); // Seleciona a navbar
+
+            // Evento de scroll na página
+            window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+            // Se o usuário está rolando para baixo, esconda a navbar
+                navbar.classList.add('navbar-hidden');
+            } else {
+            // Se o usuário está rolando para cima, mostre a navbar novamente
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            // Atualiza a última posição do scroll
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+</script>
     </body>
     </html>

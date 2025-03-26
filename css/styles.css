@@ -1,10 +1,10 @@
         /* Adiciona a imagem de fundo */
 
         body {
-                background-image: url("https://cdn.pixabay.com/photo/2022/09/13/03/07/bob-marley-7450792_1280.jpg");
+                background-image: url("https://cdn.pixabay.com/photo/2019/05/03/17/43/flag-4176448_1280.jpg");
                 background-size: cover;
                 background-position: center center;
-                height:200vh;
+                height:120vh;
                 margin: 0;
                 display: flex;
                 align-items: center;
@@ -15,13 +15,32 @@
 
             .navbar-custom {
 
-                background-color: #43ac39;
+                background-image: url("https://i.pinimg.com/736x/dc/1a/eb/dc1aeb10b21f2e03d9a82ec3e0882b65.jpg");
+                background-color: rgba(0, 0, 0, 0.5);
+                background-size: cover;
+                background-position: right;
+                background-repeat: no-repeat;
                 width: 100%;
-                padding: 10px 0;
+                padding: 20px 0;
                 text-align: center;
                 margin-top: 0px;
-                border: 1px solid #292928;
+                border: 3px solid #000000;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                font-family: 'Poppins', sans-serif;;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 1px;
 
+                
+            }
+
+            .navbar-hidden {
+
+                top: -100px;
+                transition: top 0.3s ease-out;
             }
 
                 #form-login,
@@ -31,8 +50,8 @@
                     flex-direction: column;  /* Alinha os elementos na vertical */
                     align-items: center;  /* Centraliza os itens horizontalmente */
                     width: 90%;
-                    max-width: 400px;
-                    padding: 16px;
+                    max-width: 600px;
+                    padding: 30px;
                     background-color: white;
                     border-radius: 8px;
                     margin-top: 20px;
@@ -40,20 +59,79 @@
                     text-align: center;
                     border: 1px solid #292828;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                    position: relative;
                     justify-content: center;
+                    position: relative;
+                }
+
+                /* Adiciona estilo para os links de Login e Cadastrar ficarem na mesma linha */
+
+                #form-login .form-links, #form-cadastro .form-links {
+
+                    display: flex;
+                    justify-content: center; /* Alinha ao centro */
+                    gap: 20px; /* Espaçamento entre os links */
+                    font-size: 18px; /* Ajuste do tamanho da fonte */
+                    margin-top: 20px; /* Espaço entre o formulário e os links */
+                }
+
+                /* Estilo dos links */
+
+                #form-login .form-links a, #form-cadastro .form-links a {
+
+                    color: #43ac39; /* Cor do link */
+                    text-decoration: none; /* Remove o sublinhado */
+                    font-weight: bold;
+                    transition: color 0.3s ease-in-out;
+                }
+
+                #form-login .form-links a:hover, #form-cadastro .form-links a:hover {
+
+                    color: #367a2e; /* Cor do link ao passar o mouse */
+                }
+
+                input {
+
+                    width: 80%;
+                    padding: 12px;
+                    border-radius: 8px;
+                    border: 1px solid #ccc;
+                    margin: 10px;
+                }
+
+                button {
+
+                    background-color: #43ac39;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    border-radius: 8px;
+                    border: none;
+                    padding: 14px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                button:hover {
+
+                    background-color: #367a2e;
                 }
 
                 /* Esconde o formulário de login por padrão */
 
-                #form-login {
-                    display: none;
+                #form-login a, #form-cadastro a {
+
+                    color: #43ac39; /* Verde para os links */
+                    font-weight: bold; /* Deixar o texto em negrito */
+                    font-size: 18px; /* Tamanho adequado */
+                    text-decoration: none; /* Remover sublinhado */
+                    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
                 }
+                
+                #form-login a:hover, #form-cadastro a:hover {
 
-                /* Esconde o formulário de cadastro por padrão */
-
-                #form-cadastro {
-                    display: none;
+                    color: #367a2e; /* Cor escura quando passar o mouse */
+                    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra para efeito visual */
                 }
 
                 /* Quando o formulário de login é ativo, mostramos ele */
@@ -78,75 +156,136 @@
                     margin: 10px 0;
                 }
 
-                #form-login button,
-                #form-cadastro button {
+                #form-login button, #form-cadastro button {
 
-                    width: 80%; /* Faz com que o botão ocupe a largura total */
-                    padding: 12px;
-                    background-color: #43ac39; /* Cor de fundo do botão */
+                    background-color: #43ac39; /* Cor do botão */
                     color: white;
+                    font-weight: bold; /* Deixa o texto em negrito */
+                    font-size: 18px;
+                    text-transform: uppercase; /* Coloca o texto em maiúsculas */
                     border-radius: 8px;
                     border: none;
+                    padding: 14px;
                     cursor: pointer;
-                    margin-top: 10px;
+                    transition: background-color 0.3s ease-in-out;
                 }
-
-                #form-login button:hover,
-                #form-cadastro button:hover {
-
-                    background-color: #367a2e; /* Cor do botão ao passar o mouse */
+                
+                #form-login button:hover, #form-cadastro button:hover {
+                    background-color: #367a2e; /* Cor ao passar o mouse */
                 }
 
                 /* Centraliza o texto de links e títulos dentro do formulário */
 
                 #form-login h2, #form-cadastro h2 {
-                    
-                    margin: 0;  /* Remove qualquer margem que possa desalinhar o título */
-                    padding: 0; /* Remove qualquer padding */
-                    text-align: center; /* Garante que o título fica centralizado */
-                    color: #333; /* Define a cor do título */
+
+                    color: #2c3e50; /* Cor escura para os títulos */
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 30px; /* Ajuste de tamanho para maior destaque */
+                    font-weight: 700; /* Negrito */
+                    margin-bottom: 20px; /* Espaço inferior */
+                    letter-spacing: 1px;
+                    text-transform: uppercase; /* Colocar os títulos em maiúsculas */
+                    transition: color 0.3s ease-in-out; /* Efeito suave para a cor */
+                }
+                
+                #form-login h2:hover, #form-cadastro h2:hover {
+
+                    color: #43ac39; /* Cor verde ao passar o mouse */
                 }
 
-            /* Imagem otimizada para telas pequenas */
+                /* Imagem otimizada para telas pequenas */
 
-            @media (max-width: 768px) {
+                @media (max-width: 768px) {
 
                 body {
                     background-image: url("https://cdn.pixabay.com/photo/2022/09/13/03/07/bob-marley-7450792_1280.jpg");
                 }
-            }
+                }
 
-            /* Personalização da barra de navegação */
+                /* Personalização da barra de navegação */
 
-            .navbar-custom {
+                .navbar-custom {
                 background-color: #c2d4c0;
-            }
+                }
 
-            /* Cor do texto na navbar */
+                /* Cor do texto na navbar */
 
-            .navbar-custom .navbar-brand,
-            .navbar-custom .nav-link {
+                .navbar-custom .navbar-brand,
+                .navbar-custom .nav-link {
 
-                color: black;
-            }
+                    color: #010f1d;
+                }
 
-            .navbar-custom .nav-link:hover {
+                .navbar-custom .nav-link:hover {
 
                 color: #FFD700;
+                }
+
+                .text-center {
+
+                background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Fundo com leve gradiente */
+                border-radius: 16px; /* Bordas mais arredondadas para modernidade */
+                padding: 50px 40px; /* Espaçamento mais generoso */
+                text-align: center; /* Centraliza o texto dentro da caixa */
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais profunda para efeito de flutuação */
+                max-width: 600px; /* Largura máxima da caixa */
+                width: 90%; /* Largura adaptativa para dispositivos menores */
+                transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+                backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+                border: 2px solid rgba(255, 255, 255, 0.2);
             }
+            
+            .text-center:hover {
 
-            .text-center {
-
-                margin-top: 50px;
-                padding: 10px;
-                background-color: rgba(255, 255, 255, 0.562);
-
+                transform: translateY(-10px) scale(1.05); /* Leve elevação e escala */
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
             }
+            
+            .text-center h2 {
 
-            .text-center h2,
+                font-family: 'Poppins', sans-serif; /* Fonte moderna e estilosa */
+                font-size: 30px; /* Tamanho grande para impacto */
+                font-weight: 700; /* Peso mais forte para destacar */
+                color: #2c3e50; /* Azul escuro moderno */
+                margin-bottom: 20px;
+                letter-spacing: 1.0px;
+                text-transform: uppercase;
+                transition: color 0.3s ease-in-out;
+            }
+            
+            .text-center h2:hover {
+
+                color: #43ac39; /* Verde moderno no hover */
+            }
+            
             .text-center p {
 
-                color: #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px; /* Tamanho maior para melhor legibilidade */
+                line-height: 1.8;
+                color: #555;
+                margin-bottom: 20px;
+                transition: color 0.3s ease-in-out;
+            }
+            
+            .text-center p:hover {
+
+                color: #2c3e50; /* Azul escuro no hover */
+            }
+            
+            .text-center a {
+
+                color: #43ac39;
+                font-weight: bold;
+                font-size: 20px;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+            }
+            
+            .text-center a:hover {
+
+                color: #367a2e;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
             }
 
             /* Estilo do link "Ainda não tem uma conta? Cadastre-se" */
@@ -155,5 +294,66 @@
                 
                 color: #43ac39;
                 font-weight: bold;
+                font-size: 18px;
                 text-decoration: none;
+                transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+            }
+
+            .text-center a:hover {
+
+                color: #367a2e; /* Cor mais escura no hover */
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Sombra no texto para interação */
+            }
+
+                /* Tabela da página de jogadores */
+
+            table {
+
+                width:100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                border: none;
+                background-color: #ffffff;
+                
+            }
+    
+            th, td {
+    
+                border-bottom: 2px solid #e0e0e0;
+                padding: 12px;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                color: #333;
+                
+            }
+    
+            th {
+    
+                background-color: #c29430;
+                color: white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+        
+            }
+
+            tr {
+
+                background-color: rgb(255, 255, 255);
+                
+            }
+    
+            tr:nth-child(even){
+    
+                background-color: #f8f8f8;
+            }
+
+            tr.hover {
+
+                background-color: #367a2e;
+            }
+
+            table, th, td {
+
+                border: 1px solid #000000;
             }
