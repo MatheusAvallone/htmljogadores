@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultados do Time</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+        <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body { 
+                font-family: 'Poppins', sans-serif; 
+                background: linear-gradient(145deg, #1e293b, #334155);
+                padding: 20px;
+                color: #f8fafc;
+            }
+            .navbar { 
+                background-color: #1e293b; 
+                padding: 15px; 
+                border-radius: 16px; 
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+                margin-bottom: 30px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+            }
+            .navbar ul { 
+                list-style: none; 
+                display: flex; 
+                gap: 15px; 
+            }
+            .navbar ul li { 
+                padding: 10px 15px; 
+                border-radius: 8px; 
+                background-color: #334155; 
+                cursor: pointer; 
+                transition: background-color 0.3s ease, transform 0.2s ease; 
+            }
+            .navbar ul li:hover { 
+                background-color: #3b82f6; 
+                transform: scale(1.1); 
+            }
+            .navbar a { 
+                text-decoration: none; 
+                color: #fff; 
+                padding: 10px 15px; 
+                border-radius: 8px; 
+                background-color: #334155; 
+                transition: background-color 0.3s ease, transform 0.2s ease; 
+            }
+            .navbar a:hover { 
+                background-color: #3b82f6; 
+                transform: scale(1.1); 
+            }
+            h1 { 
+                text-align: center; 
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            table {
+                width: 90vw;
+                max-width: 1200px;
+                margin: 0 auto;
+                border-collapse: collapse;
+                background-color: #1e293b;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            }
+            th, td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #334155;
+            }
+            th {
+                background-color: #334155;
+                color: #facc15;
+                font-weight: bold;
+            }
+            td img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/PaginaPrincipal.html">🏠 Início</a></li>
+            <a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html">📞 Contato</a>
+        </ul>
+    </nav>
+
+    <h1>Resultados Recentes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Placar</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="file:///C:/Users/Matheus/Pictures/MArap%C3%A9%20f.c.png"> Marapé Futebol Clube</td>
+                <td>2 - 1</td>
+                <td><img src="file:///C:/Users/Matheus/Pictures/duque%20de%20caxias.png"> Duque de Caxias F.C</td>
+            </tr>
+            <tr>
+                <td><img src="file:///C:/Users/Matheus/Pictures/paulista.png"> Paulista Futebol Clube</td>
+                <td>3 - 3</td>
+                <td><img src="file:///C:/Users/Matheus/Pictures/MArap%C3%A9%20f.c.png"> Marapé Futebol Clube</td>
+            </tr>
+            <tr>
+                <td><img src="file:///C:/Users/Matheus/Pictures/MArap%C3%A9%20f.c.png"> Marapé Futebol Clube</td>
+                <td>2 - 1</td>
+                <td><img src="file:///C:/Users/Matheus/Pictures/américa.png"> América Futebol Clube</td>
+            </tr>
+            <tr>
+                <td><img src="file:///C:/Users/Matheus/Pictures/Atibaia.png"> Atibaia Futebol Clube</td>
+                <td>2 - 5</td>
+                <td><img src="file:///C:/Users/Matheus/Pictures/MArap%C3%A9%20f.c.png"> Marapé Futebol Clube</td>
+            </tr>
+            <tr>
+                <td><img src="file:///C:/Users/Matheus/Pictures/taubaté.png"> Taubaté Futebol Clube</td>
+                <td>4 - 2</td>
+                <td><img src="file:///C:/Users/Matheus/Pictures/MArap%C3%A9%20f.c.png"> Marapé Futebol Clube</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

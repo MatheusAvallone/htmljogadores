@@ -1,41 +1,50 @@
+
         /* Adiciona a imagem de fundo */
 
         body {
-                background-image: url("https://cdn.pixabay.com/photo/2019/05/03/17/43/flag-4176448_1280.jpg");
-                background-size: cover;
-                background-position: center center;
-                height:120vh;
-                margin: 0;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+
+            padding-top: 100px; /* Ajusta para que a navbar fixa não cubra o conteúdo */
+            margin: 0;
+            background-image: url("https://cdn.pixabay.com/photo/2019/05/03/17/43/flag-4176448_1280.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 120vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            overflow-x: hidden;
+
             }
 
             /* Abaixa a barra de navegação */
 
             .navbar-custom {
 
-                background-image: url("https://i.pinimg.com/736x/dc/1a/eb/dc1aeb10b21f2e03d9a82ec3e0882b65.jpg");
+                background-image: url("https://i.pinimg.com/736x/91/9c/1e/919c1ecd6c35b49ffa95e8d490c2369e.jpg");
                 background-color: rgba(0, 0, 0, 0.5);
                 background-size: cover;
-                background-position: right;
+                background-position: center;
                 background-repeat: no-repeat;
-                width: 100%;
-                padding: 20px 0;
+                width: 100%; /* Ocupa 100% da largura do body */
+                height: 80px; /* Altura fixa sem ocupar a tela toda */
                 text-align: center;
-                margin-top: 0px;
-                border: 3px solid #000000;
+                margin: 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                border: 2px solid #ddad28;
+                border-radius: 10px;
                 position: fixed;
                 top: 0;
                 left: 0;
-                z-index: 10;
-                font-family: 'Poppins', sans-serif;;
+                z-index: 80;
+                font-family: 'Bebas Neue', sans-serif;
                 font-size: 18px;
                 font-weight: 600;
                 letter-spacing: 1px;
-
-                
+                overflow-x: hidden;
+                box-sizing: border-box;
+                padding: 10px 10px;
             }
+            
 
             .navbar-hidden {
 
@@ -178,8 +187,8 @@
 
                 #form-login h2, #form-cadastro h2 {
 
-                    color: #2c3e50; /* Cor escura para os títulos */
-                    font-family: 'Poppins', sans-serif;
+                    color: #035db6; /* Cor escura para os títulos */
+                    font-family: 'Bebas Neue', sans-serif;
                     font-size: 30px; /* Ajuste de tamanho para maior destaque */
                     font-weight: 700; /* Negrito */
                     margin-bottom: 20px; /* Espaço inferior */
@@ -213,7 +222,7 @@
                 .navbar-custom .navbar-brand,
                 .navbar-custom .nav-link {
 
-                    color: #010f1d;
+                    color: #dce3e9;
                 }
 
                 .navbar-custom .nav-link:hover {
@@ -307,53 +316,69 @@
 
                 /* Tabela da página de jogadores */
 
+            .table-striped tbody tr:nth-of-type(odd) {
+
+                background-color: #fafafa;
+            }
+
+            .table-striped tbody tr:nth-of-type(even) {
+
+                background-color: #f8f7f7;
+            }
+
+                /* Efeito de hover nas linhas */
+
+            .table-hover tbody tr:hover {
+
+                background-color: #8c9abb;
+            }
+
+            /* Estiliza o cabeçalho */
+
+            .table-dark thead th {
+
+                background-color: #dce7b3;
+                color: #000000;
+                border-bottom: 2px solid rgb(0, 0, 0);
+                padding: 15px;
+            }
+
+            /* Estiliza as bordas das células */
+
+            .table-dark td, .table-dark th {
+
+                border: 1px solid #5e5858;
+                padding: 15px;
+                text-align: center;
+            }
+
+
+            /* Estilização geral da tabela */
+
             table {
 
-                width:100%;
+                width: 80%;
+                margin: 120px auto; /* Aumentei o valor para 120px */
+                margin-top: 120px;    /* Ajustei para abaixar a tabela */
+                padding-top: 120px;
                 border-collapse: collapse;
-                margin-top: 20px;
-                border: none;
-                background-color: #ffffff;
-                
+                font-family: Arial, sans-serif;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                z-index: 1;
+                position: relative;
+                border: 2px solid red;
+                background-color: rgb(12, 11, 11);
+                height: 150px;
             }
-    
-            th, td {
-    
-                border-bottom: 2px solid #e0e0e0;
-                padding: 12px;
-                text-align: center;
-                font-family: 'Roboto', sans-serif;
-                font-size: 16px;
-                color: #333;
-                
+
+            tbody tr td:first-child::before {
+                content: "⚽ ";
+                font-weight: bold;
             }
-    
-            th {
-    
-                background-color: #c29430;
-                color: white;
-                text-transform: uppercase;
-                letter-spacing: 1px;
+            
+
+            
+
         
-            }
-
-            tr {
-
-                background-color: rgb(255, 255, 255);
-                
-            }
-    
-            tr:nth-child(even){
-    
-                background-color: #f8f8f8;
-            }
-
-            tr.hover {
-
-                background-color: #367a2e;
-            }
-
-            table, th, td {
-
-                border: 1px solid #000000;
-            }
