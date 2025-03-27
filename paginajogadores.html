@@ -6,131 +6,93 @@
 
     <style>
 
-        h1 {
+*       * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(145deg, #1e293b, #334155);
+            padding: 20px;
+            color: #f8fafc;
+        }
 
-            font-family: 'Bebas Neue', sans-serif;
-            color: #f8f6f3;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3.0px;
-            font-size: 2.8rem;
-            padding: 50px 25px;
-            background: linear-gradient(90deg, #000000, #b3d4d4), url('https://i.pinimg.com/736x/91/9c/1e/919c1ecd6c35b49ffa95e8d490c2369e.jpg'); 
-            background-size: cover;
-            background-blend-mode: overlay;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border: 2px solid #ddad28;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
+        .navbar { 
+            background-color: #1e293b; 
+            padding: 15px; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            width: 100vw;
             position: fixed;
-            top: 0px;
+            top: 0;
             left: 0;
-            z-index: 1; /* Atrás do logo */
+            z-index: 3;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 1px;
-            position: fixed;
-            top: 115px;
-            width: 100%;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.8);
-            transition: top 0.3s ease-in-out;
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 15px; 
         }
 
-        nav a:hover {
-            background-color: #ddad28;
+        .navbar ul li { 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
         }
 
-        nav a {
-            color: #f8f6f3;
-            text-decoration: none;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
+        .navbar ul li:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
         }
 
+        .navbar a { 
+            text-decoration: none; 
+            color: #fff; 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
 
-        
-        h1:hover {
+        .navbar a:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
 
-            border-color: #FF6347;
-            transition: border-color 0.3s ease;
+        h1 { 
+            text-align: center; 
+            margin-top: 100px;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
         }
 
         table {
-
             margin-top: 80px;
             width: 100%;
             border-collapse: collapse;
-            position: sticky;
-            top: 0;
-            z-index: 2;
         }
 
-        .logo {
-
-            width: 92px;
-            height: 92px;
-            border-radius: 50%;
-            border: 2px solid #ddad28;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 4;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: top 0.3s ease-in-out;
-            
+        table th {
+            color: #000;
+            background-color: #ddad28;
+            padding: 10px;
+            border: 1px solid #ddd;
         }
 
-        /* Esconde o logo ao rolar para baixo */
-
-        .logo-hidden {
-            top: -150px; /* Move o logo para fora da tela */
-            transition: top 0.3s ease-in-out;
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
         }
 
-        .logo img {
-            width: 150%;
-            height: 150%;
-            object-fit: cover; /* Preenche o espaço inteiro sem distorcer muito */
-            object-position: center;
-        }
-
-        img[src="file:///C:/Users/Matheus/Pictures/MArapé%20f.c.png"] {
-            width: 150px; /* Aumente conforme desejado */
-            height: 150px;
-        }
-        
-
-        /* Esconde a navbar ao rolar para baixo */
-
-        .navbar-hidden {
-            top: -150px;
-            transition: top 0.3s ease-in-out;
-        }
-
-        .navbar-custom {
-            
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            z-index: 2;
-            border-bottom: 2px solid #ddad28;
+        /* Efeito para destacar toda a linha ao passar o mouse */
+        table tr:hover {
+            background-color: rgba(59, 130, 246, 0.2); /* Cor de fundo ao passar o mouse */
+            transition: background-color 0.3s ease;
         }
 
     </style>
@@ -145,7 +107,7 @@
 
     <h1> 🏅 ATLETAS MARAPÉ FUTEBOL CLUBE 🏅 </h1>
 
-    <nav>
+    <nav class="navbar">
         <a href="file:///C:/dev/project/SistemaJogadores/front-end/PaginaPrincipal.html">🏠 Ínicio</a>
         <a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html">📅 Resultados</a>
         <a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html">📞 Contato</a>
@@ -195,6 +157,22 @@
     </table>
 
     <script>
+
+        document.querySelectorAll('table td, table th').forEach(cell => {
+            cell.addEventListener('mouseover', () => {
+                const index = cell.cellIndex; // Pega o índice da célula
+                document.querySelectorAll('table tr').forEach(row => {
+                    row.cells[index].classList.add('highlight'); // Adiciona a classe 'highlight' na célula da coluna
+                });
+            });
+
+            cell.addEventListener('mouseout', () => {
+                const index = cell.cellIndex;
+                document.querySelectorAll('table tr').forEach(row => {
+                    row.cells[index].classList.remove('highlight'); // Remove a classe 'highlight' ao sair do mouse
+                });
+            });
+        });
 
         let lastScrollTop = 0; // Armazena a última posição do scroll
         const navbar = document.querySelector('h1'); // Seleciona a navbar
