@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Jogos - Marapé Futebol Clube</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(145deg, #606c88, #3f4c6b);
+            padding: 20px;
+            color: #f0f8ff;
+        }
+
+        /* Navbar */
+        .navbar { 
+            background-color: #1e293b; 
+            padding: 10px; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-bottom: 2px solid #f6e33b;
+            border: 2px solid #ddad28;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 15px; 
+        }
+        .navbar ul li { 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar ul li:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+        .navbar a { 
+            text-decoration: none; 
+            color: #fff; 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar a:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+
+        /* Estilo do calendário */
+        .calendar-container {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            margin-top: 100px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .calendar .day {
+            padding: 25px;
+            background-color: #334155;
+            border-radius: 10px;
+            text-align: center;
+            color: #f0f8ff;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(219, 118, 114, 0.884);
+        }
+
+        .calendar .day:hover {
+            background-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .calendar .day p {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .calendar .day .event {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3b83f600;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar .day .event span {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 3rem; /* Aumenta o tamanho da fonte */
+            margin-top: 100px;
+            color: #f0f8ff; /* Cor clara para um contraste agradável */
+            font-weight: 700; /* Peso de fonte mais pesado */
+            text-transform: uppercase; /* Deixa as letras maiúsculas */
+            letter-spacing: 3px; /* Aumenta o espaçamento entre as letras */
+            background: linear-gradient(45deg, #f8c06b, #e3f63be8); /* Gradiente de cor */
+            -webkit-background-clip: text; /* Faz o gradiente ser aplicado ao texto */
+            color: transparent; /* Torna o texto transparente para aplicar o gradiente */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao texto para profundidade */
+            transition: all 0.4s ease-in-out; /* Transição suave para efeitos interativos */
+        }
+
+        h2:hover {
+            transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+            color: #f0dc2c; /* Faz o texto voltar à cor branca quando o mouse passa por cima */
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/templateLogado.html#" onclick="loadPage('inicio.html')">🏠 Ínicio</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html" onclick="loadPage('paginajogadores.html')">🏃‍♂️ Jogadores</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html" onclick="loadPage('resultados.html')">📅 Resultados</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html" onclick="loadPage('contatos.html')">📞 Contatos</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/agendadetreinos.html" onclick="loadPage('agendadetreinos.html')">🗓️ Agenda de treinos</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/tabelacampeonato.html" onclick="loadPage('tabelacampeonato.html')">📅 Tabela Campeonato</a></li>
+            </ul>
+        </nav>
+    
+        <h1>Marapé Futebol Clube</h1>
+    
+    </header>
+
+    <!-- Conteúdo Dinâmico -->
+    <main id="content">
+        <div class="content">
+            <h2>Próximos Jogos</h2>
+
+            <!-- Calendário -->
+            <div class="calendar-container">
+                <div class="calendar">
+                    <!-- Cabeçalho com os dias da semana -->
+                    <div class="day" style="background-color: #D82C2C;"><p>Dom</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Seg</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Ter</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Qua</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Qui</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Sex</p></div>
+                    <div class="day" style="background-color: #D82C2C;"><p>Sáb</p></div>
+
+                    <!-- 01 a 31 dias do mês -->
+                    <div class="day"><p>01</p></div>
+                    <div class="day"><p>02</p></div>
+                    <div class="day"><p></p><div class="event"><span>Marapé x Cricíuma</span></div></div>
+                    <div class="day"><p>04</p></div>
+                    <div class="day"><p>05</p></div>
+                    <div class="day"><p>06</p></div>
+                    <div class="day"><p>07</p></div>
+                    <div class="day"><p>08</p></div>
+                    <div class="day"><p>09</p></div>
+                    <div class="day"><p>10</p></div>
+                    <div class="day"><p>11</p></div>
+                    <div class="day"><p></p><div class="event"><span>Cruzeiro x Marapé</span></div></div>
+                    <div class="day"><p>13</p></div>
+                    <div class="day"><p>14</p></div>
+                    <div class="day"><p>15</p></div>
+                    <div class="day"><p>16</p></div>
+                    <div class="day"><p></p><div class="event"><span>Grêmio x Marapé</span></div></div>
+                    <div class="day"><p>18</p></div>
+                    <div class="day"><p>19</p></div>
+                    <div class="day"><p>20</p></div>
+                    <div class="day"><p>21</p></div>
+                    <div class="day"><p>22</p></div>
+                    <div class="day"><p>23</p></div>
+                    <div class="day"><p>24</p></div>
+                    <div class="day"><p>25</p></div>
+                    <div class="day"><p></p><div class="event"><span>Marapé x Coritiba</span></div></div>
+                    <div class="day"><p>27</p></div>
+                    <div class="day"><p>28</p></div>
+                    <div class="day"><p>29</p></div>
+                    <div class="day"><p></p><div class="event"><span>Marapé x Maringá</span></div></div>
+                    <div class="day"><p>31</p></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script para carregar as paginas dinamicamente -->
+    <script src="scripts/javascript.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Treinos - Marapé Futebol Clube</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #606c88, #3f4c6b);
+            padding: 20px;
+            color: #f8fafc;
+        }
+
+        /* Navbar */
+        .navbar { 
+            background-color: #1e293b; 
+            padding: 10px; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-bottom: 2px solid #ddad28;
+            border: 2px solid #ddad28;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 10px; 
+        }
+        .navbar ul li { 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar ul li:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+        .navbar a { 
+            text-decoration: none; 
+            color: #fff; 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar a:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+
+        /* Agenda */
+        main {
+            margin-top: 120px; /* Ajusta a posição para não sobrepor a navbar */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f6e33b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #34495e;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/templateLogado.html#">🏠 Ínicio</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html">🏃‍♂️ Jogadores</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html">📅 Resultados</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html">📞 Contatos</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/proximosjogos.html">🏟️ Próximos Jogos</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/tabelacampeonato.html">📅 Tabela Campeonato</a></li>
+            </ul>
+        </nav>
+        <h1>Marapé Futebol Clube</h1>
+    </header>
+
+    <main>
+        <h2>Agenda de Treinos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Dia da Semana</th>
+                    <th>Horário</th>
+                    <th>Local</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/04/2025</td>
+                    <td>Segunda-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo A</td>
+                </tr>
+                <tr>
+                    <td>03/04/2025</td>
+                    <td>Quarta-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>05/04/2025</td>
+                    <td>Sexta-feira</td>
+                    <td>19:00 - 21:00</td>
+                    <td>Campo A</td>
+                </tr>
+                <tr>
+                    <td>08/04/2025</td>
+                    <td>Segunda-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>10/04/2025</td>
+                    <td>Quarta-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo A</td>
+                </tr>
+                <tr>
+                    <td>12/04/2025</td>
+                    <td>Sexta-feira</td>
+                    <td>19:00 - 21:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>15/04/2025</td>
+                    <td>Segunda-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo A</td>
+                </tr>
+                <tr>
+                    <td>17/04/2025</td>
+                    <td>Quarta-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>19/04/2025</td>
+                    <td>Sexta-feira</td>
+                    <td>19:00 - 21:00</td>
+                    <td>Campo A</td>
+                </tr>
+                <tr>
+                    <td>22/04/2025</td>
+                    <td>Segunda-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>17/04/2025</td>
+                    <td>Quarta-feira</td>
+                    <td>18:00 - 20:00</td>
+                    <td>Campo B</td>
+                </tr>
+                <tr>
+                    <td>19/04/2025</td>
+                    <td>Sexta-feira</td>
+                    <td>19:00 - 21:00</td>
+                    <td>Campo A</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marapé Futebol Clube | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

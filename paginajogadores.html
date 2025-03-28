@@ -16,7 +16,7 @@
 
         .navbar { 
             background-color: #1e293b; 
-            padding: 15px; 
+            padding: 10px; 
             border-radius: 16px; 
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
             margin-bottom: 30px; 
@@ -36,11 +36,11 @@
         .navbar ul { 
             list-style: none; 
             display: flex; 
-            gap: 40px; 
+            gap: 15px; 
         }
 
         .navbar ul li { 
-            padding: 20px 25px; 
+            padding: 10px 10px; 
             border-radius: 8px; 
             background-color: #334155; 
             cursor: pointer; 
@@ -106,9 +106,14 @@
     <h1> 🏅 ATLETAS MARAPÉ FUTEBOL CLUBE 🏅 </h1>
 
     <nav class="navbar">
-        <a href="file:///C:/dev/project/SistemaJogadores/front-end/PaginaPrincipal.html">🏠 Ínicio</a>
-        <a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html">📅 Resultados</a>
-        <a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html">📞 Contato</a>
+        <ul>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/templateLogado.html#" onclick="loadPage('inicio.html')">🏠 Ínicio</a></li>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html" onclick="loadPage('resultados.html')">📅 Resultados</a></li>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html" onclick="loadPage('contatos.html')">📞 Contatos</a></li>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/agendadetreinos.html" onclick="loadPage('agendadetreinos.html')">🗓️ Agenda de treinos</a></li>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/proximosjogos.html" onclick="loadPage('proximosjogos.html')">🏟️ Próximos Jogos</a></li>
+            <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/tabelacampeonato.html" onclick="loadPage('tabelacampeonato.html')">📅 Tabela Campeonato</a></li>
+        </ul>
     </nav>
 
     
