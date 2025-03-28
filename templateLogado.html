@@ -1,41 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-BR"></html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <title>Meu Site</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            display: flex;
+            flex-direction: column; /* Alinha o conteúdo em coluna */
+            min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da tela */
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(145deg, #606c88, #3f4c6b);
+            padding: 20px;
+            color: #f8fafc;
+        }
+
+        /* Caixa de notícias */
+        .news-box {
+            background-color: #1e293b; 
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 150px; /* Ajustado para ficar abaixo da navbar fixa */
+            left: 20px;
+            width: 450px;
+            max-height: 700px;
+            overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+            z-index: 999; /* Garante que a caixa não fique atrás de outros elementos */
+        }
+
+        /* Título das notícias */
+        .news-box h3 {
+            font-size: 1.5rem;
+            color: #f6e33b;
+            margin-bottom: 15px; /* Aumenta a margem inferior para maior separação */
+            text-align: center; /* Centraliza o título */
+        }
+
+        /* Estilo de cada notícia dentro da caixa */
+        .news-item {
+            margin-bottom: 15px; /* Espaçamento entre as notícias */
+            padding-bottom: 15px;
+            border-bottom: 1px solid #334155; /* Linha de separação entre as notícias */
+        }
+
+        .news-item:last-child {
+            border-bottom: none; /* Remove a linha da última notícia */
+        }
+
+        .news-item p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .news-item strong {
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px; /* Espaço entre o main e o footer */
+            text-align: center; /* Centraliza o conteúdo do footer */
+            font-size: 1rem; /* Ajusta o tamanho da fonte do rodapé */
+            color: #d1d5db; /* Cor do texto do rodapé */
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0; /* Remove qualquer margem extra no parágrafo do footer */
+        }
+
+        /* Já existente: Navbar fixa */
+        .navbar { 
+            background-color: #1e293b; 
+            padding: 15px; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-bottom: 2px solid #ddad28;
+            border: 2px solid #ddad28;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 40px; 
+        }
+        .navbar ul li { 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar ul li:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+        .navbar a { 
+            text-decoration: none; 
+            color: #fff; 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            background-color: #334155; 
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        .navbar a:hover { 
+            background-color: #3b82f6; 
+            transform: scale(1.1); 
+        }
+
+        .news-item strong {
+            color: rgb(207, 228, 92); /* Altera a cor do texto dentro de <strong> */
+        }
+    </style>
 </head>
 <body>
 
-
-    <!-- Cabeçalho -->
-     <header>
-        <h1>Meu Site</h1>
-        <nav>
+    <header>
+        <nav class="navbar">
             <ul>
-                <li><a href="#" onclick="loadPage('cadastrar.html')">cadastrar</a></li>
-                <li><a href="#" onclick="loadPage('login.html')">login</a></li>
-                <li><a href="#" onclick="loadPage('paginajogadores.html')">paginajogadores</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/PaginaPrincipal.html" onclick="loadPage('inicio.html')">🏠 Ínicio</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html" onclick="loadPage('paginajogadores.html')">🏃‍♂️ Jogadores</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html" onclick="loadPage('resultados.html')">📅 Resultados</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/contatos.html" onclick="loadPage('contatos.html')">📞 Contatos</a></li>
+                <li><a href="#" onclick="loadPage('contatos.html')">🗓️ Agenda de treinos</a></li>
+                <li><a href="#" onclick="loadPage('contatos.html')">🏟️ Próximos Jogos</a></li>
+                <li><a href="#" onclick="loadPage('contatos.html')">📅 Tabela Campeonato</a></li>
             </ul>
         </nav>
-     </header>
+    
+        <h1>Marapé Futebol Clube</h1>
+    
+    </header>
 
-     <!-- Conteúdo Dinâmico -->
+    <div class="logo">
+        <img src="C:\Users\Matheus\Pictures\times\marape.png" alt="Logo do Marapé FC">
+    </div>
 
-     <main id="content">
-        <h2>Bem-Vindo!</h2>
-        <p> Este é o conteúdo inicial da página. </p>
-     </main>
+    <!-- Conteúdo Dinâmico -->
+    <main id="content">
+        <div class="content">
+            <h2>Bem-Vindo!</h2>
+            <p> Este é o conteúdo inicial da página. </p>
+        </div>
+    </main>
 
-     <!-- Rodapé -->
+    <!-- Caixa de Notícias -->
+    <div class="news-box">
+        <h3>Últimas Notícias</h3>
 
-     <footer>
+        <div class="news-item">
+            <p><strong>Novidade no time!</strong> O Marapé Futebol Clube anuncia novos reforços para a próxima temporada. Fique atento às atualizações!</p>
+        </div>
+
+        <div class="news-item">
+            <p><strong>Jogo importante!</strong> Nosso próximo jogo será contra o time rival no estádio Marapé. Não perca!</p>
+        </div>
+
+        <div class="news-item">
+            <p><strong>Participe do evento!</strong> Não perca nosso evento beneficente neste fim de semana. Toda a renda será destinada à manutenção do clube.</p>
+        </div>
+
+        <div class="news-item">
+            <p><strong>Gustavo Sato:</strong> Jogador Gustavo Sato sofre lesão grave no joelho e está fora do clássico no próximo jogo.</p>
+        </div>
+
+        <div class="news-item">
+            <p><strong>Ùltimo Jogo:</strong> Marapé Futebol Clube conquista mais uma vitória importante dentro de casa contra 
+                o Duque de Caxias e garante mais 3 pontos na Tabela.</p>
+        </div>
+
+        <div class="news-item">
+            <p><strong>Agenda de treinos:</strong> Confira nossa agenda de treinos para o mês de abril. Vamos nos preparar para os próximos desafios!</p>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
         <p>&copy; 2025 - Todos os direitos reservados</p>
-     </footer>
+    </footer>
 
-     <!-- Script para carregar as paginas dinamicamente -->
-      <script src="scripts/javascript.js"></script>
+    <!-- Script para carregar as paginas dinamicamente -->
+    <script src="scripts/javascript.js"></script>
       
 </body>
 </html>

@@ -26,13 +26,16 @@
             padding: 15px; 
             border-radius: 16px; 
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
-            margin-bottom: 30px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
             width: 100%;
             border-bottom: 2px solid #ddad28;
             border: 2px solid #ddad28;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .navbar h2 { 
 
@@ -139,11 +142,16 @@
 </head>
 <body>
 
+    <div class="logo">
+        <img src="C:\Users\Matheus\Pictures\times\marape.png" alt="Logo do Marapé FC">
+    </div>
+
     <nav class="navbar">
         
         <ul>
             <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/PaginaPrincipal.html">🏠 Início</a></li>
             <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/resultados.html">📅 Resultados</a></li>
+            <a href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html">🏃‍♂️ Jogadores</a>
             
         </ul>
     </nav>

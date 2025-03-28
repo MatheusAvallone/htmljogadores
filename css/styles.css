@@ -232,22 +232,26 @@
 
                 .text-center {
 
-                background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Fundo com leve gradiente */
-                border-radius: 16px; /* Bordas mais arredondadas para modernidade */
-                padding: 50px 40px; /* Espaçamento mais generoso */
-                text-align: center; /* Centraliza o texto dentro da caixa */
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais profunda para efeito de flutuação */
-                max-width: 600px; /* Largura máxima da caixa */
-                width: 90%; /* Largura adaptativa para dispositivos menores */
-                transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-                backdrop-filter: blur(10px); /* Efeito de vidro fosco */
-                border: 2px solid rgba(255, 255, 255, 0.2);
-            }
+                    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Fundo com leve gradiente */
+                    border-radius: 16px; /* Bordas mais arredondadas para modernidade */
+                    padding: 50px 40px; /* Espaçamento mais generoso */
+                    text-align: center; /* Centraliza o texto dentro da caixa */
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais profunda para efeito de flutuação */
+                    max-width: 600px; /* Largura máxima da caixa */
+                    width: 90%; /* Largura adaptativa para dispositivos menores */
+                    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+                    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    position: relative; /* Tornar a posição relativa ao fluxo normal do layout */
+                    top: 20px; /* Ajusta a posição para abaixo do navbar */
+                    left: 50%; /* Centraliza horizontalmente */
+                    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+                }
             
             .text-center:hover {
 
-                transform: translateY(-10px) scale(1.05); /* Leve elevação e escala */
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+                transform: translate(-50%, -60%); /* Move a caixa para cima quando o mouse está sobre ela */
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
             }
             
             .text-center h2 {
