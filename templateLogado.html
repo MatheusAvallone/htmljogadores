@@ -31,6 +31,7 @@
             max-height: 700px;
             overflow-y: auto; /* Adiciona rolagem vertical se necessário */
             z-index: 999; /* Garante que a caixa não fique atrás de outros elementos */
+            
         }
 
         /* Título das notícias */
@@ -141,6 +142,47 @@
             font-size: 2rem;         /* Tamanho maior para melhor destaque */
             margin-bottom: 10px;     /* Espaçamento inferior para separar do parágrafo */
         }
+
+        .stats-box {
+            background-color: #1e293b;
+            padding: 4px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            width: 600px; /* Mantém a largura adequada para acomodar os itens lado a lado */
+            position: fixed; /* Fixa a caixa à posição */
+            top: 80px; /* Ajuste conforme necessário para ficar abaixo da navbar */
+            right: 20px; /* Fixa a caixa no lado direito da tela */
+            z-index: 999; /* Garante que a caixa fique à frente de outros elementos */
+            border: 2px solid #ddad28;
+            display: flex; /* Faz com que os itens dentro da stats-box fiquem lado a lado */
+            justify-content: space-between; /* Distribui o espaço igualmente entre os itens */
+            flex-wrap: wrap; /* Faz os itens quebrarem de linha quando não houver espaço suficiente */
+        }
+
+        .stats-box h3 {
+            text-align: center;
+            color: #ffd900;
+            margin-bottom: 4px;
+            width: 120%; /* Faz com que o título ocupe toda a largura disponível */
+            font-size: 1.0rem;
+            background-color: #1e293b;
+            padding: 10px;
+            
+        }
+
+        .stats-box ul {
+            list-style: none;
+            padding-left: 10px;
+            display: flex; /* Coloca os itens da lista em linha */
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .stats-box ul li {
+            margin-bottom: 4px;
+            color: #dbd9d1;
+            width: 45%; /* Dá uma largura razoável para cada item */
+        }
     </style>
 </head>
 <body>
@@ -173,6 +215,16 @@
             <p> Este é o conteúdo inicial da página. </p>
         </div>
     </main>
+
+    <div class="stats-box">
+        <h3>Estatísticas do Time</h3>
+        <ul>
+            <li>Vitórias: 12</li>
+            <li>Derrotas: 3</li>
+            <li>Empates: 2</li>
+            <li>Gols marcados: 35</li>
+        </ul>
+    </div>
 
     <!-- Caixa de Notícias -->
     <div class="news-box">

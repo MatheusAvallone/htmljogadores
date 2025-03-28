@@ -144,17 +144,15 @@
 
         h2 {
             text-align: center;
-            font-size: 3rem; /* Aumenta o tamanho da fonte */
-            margin-top: 100px;
-            color: #f0f8ff; /* Cor clara para um contraste agradável */
-            font-weight: 700; /* Peso de fonte mais pesado */
-            text-transform: uppercase; /* Deixa as letras maiúsculas */
-            letter-spacing: 3px; /* Aumenta o espaçamento entre as letras */
-            background: linear-gradient(45deg, #f8c06b, #e3f63be8); /* Gradiente de cor */
-            -webkit-background-clip: text; /* Faz o gradiente ser aplicado ao texto */
-            color: transparent; /* Torna o texto transparente para aplicar o gradiente */
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao texto para profundidade */
-            transition: all 0.4s ease-in-out; /* Transição suave para efeitos interativos */
+            color: #facc15;
+            margin-top: 20px; /* Valor negativo para subir */
+            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #facc15, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 4px 8px rgba(37, 158, 25, 0.3);
+            animation: glow 2s infinite alternate;
         }
 
         h2:hover {
@@ -162,6 +160,23 @@
             color: #f0dc2c; /* Faz o texto voltar à cor branca quando o mouse passa por cima */
             text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
         }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 1rem;
+            color: #d1d5db;
+            padding: 10px;
+            background-color: #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+            width: 100vw; /* Faz com que ocupe 100% da largura da tela */
+            left: 0;
+            position: fixed; /* Mantém o footer fixo na parte inferior */
+            bottom: 0;
+        }
+
+        
 
     </style>
 </head>
