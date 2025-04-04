@@ -10,46 +10,26 @@
         
         <style>
 
-        .navbar-custom {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #000;
-            padding: px;
-            text-align: center;
-            z-index: 2;
-            border-bottom: 2px solid #ddad28;
-            overflow: hidden;
-        }
+            .text-center h2 {
+                margin-top: 50px; /* Ajuste conforme necessário */
+                color: #00d4ff;
+            }
+
+            .text-center p {
+                margin-top: 20px; /* Ajuste conforme necessário */
+            }
 
         </style>
     </head>
-
+       
     <body>
-
-        <div class="container mt-5">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-custom">
-                <a class="navbar-brand" href="#"> MARAPÉ FUTEBOL CLUBE </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="file:///C:/dev/project/SistemaJogadores/front-end/cadastrar.html" id="nav-cadastrar">Cadastrar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/dev/project/SistemaJogadores/front-end/login.html" id="nav-login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/dev/project/SistemaJogadores/front-end/paginajogadores.html" id="nav-jogadores">Jogadores</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/cadastrar.html" onclick="loadPage('cadastrar.html')">Cadastro</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/login.html" onclick="loadPage('login.html')">Login</a></li>
+                <li><a href="file:///C:/dev/project/SistemaJogadores/front-end/templateLogado.html" onclick="loadPage('templateLogado.html')">Sistema</a></li>    
+            </ul>
+        </nav>
 
             <div class="text-center mt-5">
                 <h2>Bem-Vindo ao Marapé Futebol Clube!</h2>
@@ -61,7 +41,7 @@
             <img src="C:\Users\Matheus\Pictures\times\marape.png" alt="Logo do Marapé FC">
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
 
